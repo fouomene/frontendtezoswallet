@@ -1,0 +1,44 @@
+<nav>
+    <div class="nav-wrapper indigo darken-1">
+      <a routerLink="/login" class="hide-on-med-and-down right"><mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon> Hello {{emailusers}} ! <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon> Logout</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#">My Transcations Tezos ꜩ</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+
+        
+<p></p>
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-12'>
+           
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Amount</th>
+                    <th>Fee</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let t of transactions">
+                    <td>{{ t.pkhsource }}</td>
+                    <td>{{ t.pkhdestination }}</td>
+                    <td>{{ t.amount }}</td>
+                    <td>{{ t.fee }}</td>
+                    <td>{{ t.datetrans }}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+

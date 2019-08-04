@@ -1,0 +1,42 @@
+<div class='container account-container'>
+    <div class='row'>
+        <div class='col-md-12 account-form-1'>
+            <h3>Create your account and send tezos around the world.</h3>
+            <form [formGroup]="accountForm" (ngSubmit)="onSubmit(accountForm.value)">
+                <div class='form-group'>
+                    <input type='text' class='form-control' formControlName="firstName" 
+                    required placeholder='First Name *' value='' />
+                </div>
+                <div class='form-group'>
+                    <input type='text' class='form-control' formControlName="lastName" 
+                    required placeholder='Last Name *' value='' />
+                </div>
+                <div class='form-group'>
+                    <input type='email' class='form-control' formControlName="email" 
+                    required placeholder='Email *' value='' />
+                </div>
+                <div class='form-group'>
+                    <input type='password' class='form-control' formControlName="password" 
+                    required placeholder='Password *' value='' />
+                </div>
+                <div class='form-group'>
+                    <input type='password' class='form-control' formControlName="confirmPassword" 
+                    required placeholder='Confirm Password *' value='' />
+                </div>
+                <div *ngIf="!onPasswordMatch(accountForm.value)" class="alert alert-warning">
+                    Password does not match !!
+                </div>
+                <div class='form-group text-center'>
+                    <input type='submit' class='btnSubmit' 
+                    [disabled]="!onPasswordMatch(accountForm.value)" value='Create' />
+                </div>
+                <div class="form-group">
+                        <a routerLink="/login" class="ForgetPwd">Login</a>
+                </div>
+                <div class="form-group">
+                        {{message}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

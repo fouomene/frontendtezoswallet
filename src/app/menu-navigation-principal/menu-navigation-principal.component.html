@@ -1,0 +1,86 @@
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+      <mat-nav-list  >
+        <h2 matSubheader> Account</h2>
+        <a mat-list-item routerLink="/dashboard" routerLinkActive="active">
+            <mat-icon matListIcon class="app-nav-list-icon" >
+              dashboard
+            </mat-icon> 
+              Dashboard
+           </a>
+            <a mat-list-item routerLink="/profile" routerLinkActive="active">
+              <mat-icon matListIcon class="app-nav-list-icon" >
+                account_circle
+              </mat-icon> 
+                My Profile
+            </a>
+            <a mat-list-item routerLink="/balance" >
+              <mat-icon matListIcon class="app-nav-list-icon" >
+                account_balance_wallet
+              </mat-icon> 
+                My Balance ꜩ
+            </a>
+            <a mat-list-item routerLink="/active-wallet" >
+              <mat-icon matListIcon class="app-nav-list-icon" >
+                done
+              </mat-icon> 
+              Activate My Wallet
+            </a>
+  
+        <mat-divider></mat-divider>
+        <h2 matSubheader> Transactions</h2>
+            <a mat-list-item routerLink="/transfer">
+              <mat-icon matListIcon class="app-nav-list-icon" >send</mat-icon>
+              Send Tezos ꜩ
+            </a>
+            <a mat-list-item routerLink="/buy">
+                <mat-icon matListIcon class="app-nav-list-icon" >add_shopping_cart</mat-icon>
+                Buy Tezos ꜩ with XAF 
+            </a>
+            <a mat-list-item routerLink="#">
+               <mat-icon matListIcon class="app-nav-list-icon" >business_center</mat-icon>
+               Sell Tezos ꜩ vs XAF
+          </a>       
+  
+      <mat-divider></mat-divider>
+      <h2 matSubheader> Operations</h2>
+          <a mat-list-item routerLink="/mobile">
+            <mat-icon matListIcon class="app-nav-list-icon" >person_add</mat-icon>
+            Withdrawal Tezos ꜩ to XAF
+          </a>
+          <a mat-list-item routerLink="/list-transaction">
+            <mat-icon matListIcon class="app-nav-list-icon" >list</mat-icon>
+            My Transactions ꜩ
+          </a>
+          <a mat-list-item routerLink="#">
+            <mat-icon matListIcon class="app-nav-list-icon" >settings</mat-icon>
+            Setting
+          </a>
+    </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary" >
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Wallet Tezos ꜩ App</span>
+        <span class="example-spacer"></span> 
+        <img src="https://10000codeurs-lab.xyz/gAu5IpqN_200x200.jpg"  style="width:60px;height:40px;">
+        <img src="https://10000codeurs-lab.xyz/Bnz2uHBf_200x200.png"  style="width:100px;height:40px;">
+        <img src="https://10000codeurs-lab.xyz/logocodeurbon.png
+        "  style="width:100px;height:40px;">
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+

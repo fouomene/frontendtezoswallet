@@ -1,0 +1,26 @@
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-12 login-form-1">
+            <h3>Wallet Tezos</h3>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="email" 
+                    required placeholder="Your Email *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" formControlName="password" 
+                     required placeholder="Your Password *" value="" />
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                    <a routerLink="/create-account" class="ForgetPwd">Create Account</a>
+                </div>
+                <div class="form-group">
+                    {{message}}
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

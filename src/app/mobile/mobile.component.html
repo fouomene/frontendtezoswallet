@@ -1,0 +1,56 @@
+<nav>
+        <div class="nav-wrapper indigo darken-1">
+          <a href="#" class="hide-on-med-and-down right"><mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon> Hello {{emailusers}} !<mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon> Logout</a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#">Withdrawal Tezos ꜩ to XAF in implementation</a></li>
+            
+          </ul>
+        </div>
+      </nav>
+<div class='container account-container'>
+        <div class='row'>
+            <div class='col-md-12 account-form-1'>
+                <h3>Withdrawal Tezos ꜩ to XAF</h3>
+                <form >
+                    <div class='form-group'>
+                         <h4> Amount Tezos ꜩ </h4>
+                         <input [(ngModel)]="amonttezo"  (change)="somethingChanged()" name="amonttezo" required>
+                    </div>
+                    <div class='form-group'>
+                            <h4> Amount Franc CFA </h4><br>
+                            <h1>{{ amonttezo*772 }} </h1>F CFA
+                    </div>
+                    <div class='form-group'>
+                            <h4>Transfer way</h4><br>
+                            
+                            <img src="https://10000codeurs-lab.xyz/transfert.png" >
+                            
+                            <p>
+                                    <label>
+                                      <input type="checkbox" class="filled-in indigo darken-1" checked="checked" />
+                                      <span>Mobile Money</span>
+                                    </label>
+                                  </p>
+                                  <p>
+                                        <label>
+                                          <input type="checkbox" class="filled-in indigo darken-1" />
+                                          <span>Money Transfert</span>
+                                        </label>
+                                      </p>
+
+                           
+                    </div>
+                    <div class='form-group'>
+                            <h4> Your phone :  </h4>
+                            <input name="phone" required>
+                    </div>
+                    <div class='form-group text-center'>
+                        <input type='submit' class='btnSubmit' 
+                         value='Withdrawal' />
+                    </div>
+      
+                </form>
+            </div>
+        </div>
+    </div>
+    

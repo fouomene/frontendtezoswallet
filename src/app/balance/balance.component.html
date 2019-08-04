@@ -1,0 +1,22 @@
+<nav>
+  <div class="nav-wrapper indigo darken-1">
+    <a href="#" class="hide-on-med-and-down right"><mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon> Hello {{emailusers}} ! <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">exit_to_app</mat-icon> Logout</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a href="#">My Balance Tezos ꜩ</a></li>
+      
+    </ul>
+  </div>
+</nav>
+
+<div class="container login-container">
+        <div class="row">
+            <div class="col-md-12 login-form-1">
+                <h4>Your Balance Account Tezos</h4>
+                <h2> {{ (balance/1000000) }} ꜩ == {{ ((balance/1000000)*772) }} FCFA</h2>
+                <h2> </h2>
+                <h4> Your Account Id Tezos</h4>
+                <h5>{{pkh}}</h5>
+            </div>
+        </div>
+    </div>
+    
